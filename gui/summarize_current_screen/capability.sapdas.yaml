@@ -1,0 +1,8 @@
+schema_version: 3.29.0
+
+metadata:
+  namespace: com.sap.das.demo
+  display_name: "Summarize current screen"
+  name: summarize_current_screen
+  version: 1.0.0
+  description: Summarizes what is currently shown on the SAP GUI screen — screen title, input fields with values, tabs, and buttons — as readable text. No user input required.

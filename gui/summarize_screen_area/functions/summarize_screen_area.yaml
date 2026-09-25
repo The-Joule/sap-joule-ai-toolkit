@@ -1,0 +1,16 @@
+parameters:
+  - name: root_element_id
+    optional: false
+
+action_groups:
+  - actions:
+      - type: agent-request
+        name: screen_area_summarizer
+        body: >
+          { "message": "Summarize the SAP GUI screen subtree. root_element_id=<? root_element_id ?>. Pass this exact root_element_id to the Describe UI Area Tool without modification." }
+        result_variable: agentResponse
+      - type: message
+        message:
+          type: text
+          markdown: true
+          content: "<? agentResponse.body.message ?>"

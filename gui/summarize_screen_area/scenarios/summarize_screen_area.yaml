@@ -1,0 +1,20 @@
+description: >
+  Summarizes a specific area of the current SAP GUI screen identified by a
+  user-supplied element ID. Returns a readable overview including fields, values,
+  tables with rows, tree hierarchies, tabs, and buttons for that area. The root
+  element ID must be provided by the user; there is no default.
+
+title: Summarize screen area by root ID
+
+
+conversation_starter:
+  trigger_utterance: Summarize a UI area of the current SAP GUI screen by root element ID.
+
+
+slots:
+  - name: root_element_id
+    description: The SAP GUI element ID for the screen subtree to summarize.
+
+target:
+  type: function
+  name: summarize_screen_area
